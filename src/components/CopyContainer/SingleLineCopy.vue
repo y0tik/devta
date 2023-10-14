@@ -4,12 +4,13 @@ import { formatToID } from "../utils/common";
 const props = defineProps({
   title: String,
   value: String | Number,
+  id: String,
 });
 
 const handleClick = () => {
   copyToClipboard(props.value);
 };
-const id = formatToID(props.title);
+const id = props.id || formatToID(props.title);
 </script>
 
 <template>

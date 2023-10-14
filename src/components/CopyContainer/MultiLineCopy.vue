@@ -12,7 +12,7 @@ const props = defineProps({
 const handleClick = () => {
   copyToClipboard(props.value);
 };
-const id = formatToID(props.title);
+const id = props.id || formatToID(props.title);
 const style = {
   height: props.height,
 };
